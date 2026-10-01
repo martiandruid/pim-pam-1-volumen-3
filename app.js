@@ -18,10 +18,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { "movimiento": "Extensión lumbar activa", "fisiologico": "0° - 25°", "objetivo_fase": "10° - 15° (bloqueo neutro)" }
       ],
       "musculos_daniels": [
-        { "musculo": "Extensores lumbares (Multífidos/Erector columna)", "minimo_esperado": "3/5" },
-        { "musculo": "Tibial anterior (L4)", "minimo_esperado": "4/5" },
-        { "musculo": "Extensor largo del hálux (L5)", "minimo_esperado": "3/5" },
-        { "musculo": "Gastrocnemios/Sóleo (S1)", "minimo_esperado": "4/5" }
+        { "musculo": "Extensores lumbares / Multífidos (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Tibial Anterior - Raíz L4 (Músculo Diana)", "minimo_esperado": "4/5" },
+        { "musculo": "Extensor Largo del Hálux - Raíz L5 (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Gastrocnemios / Sóleo - Raíz S1 (Músculo Diana)", "minimo_esperado": "4/5" },
+        { "musculo": "Transverso del Abdomen / Core Deep (Músculo Diana)", "minimo_esperado": "3/5 (activación isométrica)" }
       ],
       "items": [
         {
@@ -56,6 +57,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
+    {
+      "id": "artrodesis_cervical",
+      "region": "columna",
+      "nombre": "Artrodesis Cervical Anterior / ACDF (Semanas 4 - 12)",
+      "rom": [
+        { "movimiento": "Flexoextensión cervical", "fisiologico": "0° - 45°", "objetivo_fase": "20° - 25° (limitado por collarín)" },
+        { "movimiento": "Rotación cervical", "fisiologico": "0° - 80°", "objetivo_fase": "30° - 40°" }
+      ],
+      "musculos_daniels": [
+        { "musculo": "Flexores Profundos Cervicales / Largo del Cuello (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Deltoides / Biceps Braquial - Raíz C5-C6 (Músculo Diana)", "minimo_esperado": "4/5" },
+        { "musculo": "Tríceps Braquial - Raíz C7 (Músculo Diana)", "minimo_esperado": "4/5" },
+        { "musculo": "Trapecio Inferior y Serrato Anterior (Músculo Diana)", "minimo_esperado": "3/5" }
+      ],
+      "items": [
+        {
+          "id": "control_cefalico_sin_dolor",
+          "criterio": "Movilidad activa cervical > 50% sin radiculalgia braquial",
+          "causas_no_cumplimiento": [
+            "Espasmo severo del trapecio superior y elevador de la escápula.",
+            "Irritación residual del plexo braquial por distracción intraoperatoria.",
+            "Retraso en la consolidación ósea de la caja/placa."
+          ]
+        }
+      ],
+      "tests": [
+        {
+          "id": "test_spurling",
+          "nombre": "Test de Spurling (Cierre Foraminal)",
+          "descripcion": "Inclinación lateral y compresión axial para reproducir síntoma radicular cervical."
+        },
+        {
+          "id": "test_distraccion_cervical",
+          "nombre": "Test de Distracción Cervical",
+          "descripcion": "Tracción manual axial. Positivo si disminuye o abole la radiculalgia."
+        }
+      ]
+    },
 
     // --- MIEMBRO SUPERIOR ---
     {
@@ -68,8 +107,11 @@ document.addEventListener('DOMContentLoaded', () => {
         { "movimiento": "Abducción pasiva", "fisiologico": "0° - 180°", "objetivo_fase": "70° - 80°" }
       ],
       "musculos_daniels": [
-        { "musculo": "Trapecio inferior y Serrato anterior", "minimo_esperado": "3/5 (estabilizadores)" },
-        { "musculo": "Supraespinoso / Deltoides", "minimo_esperado": "0-1/5 (Contraindicada contracción activa forzada)" }
+        { "musculo": "Supraespinoso (Músculo Diana)", "minimo_esperado": "0-1/5 (Prohibido trabajo activo)" },
+        { "musculo": "Infraespinoso / Redondo Menor (Músculo Diana)", "minimo_esperado": "0-1/5 (Prohibido trabajo activo)" },
+        { "musculo": "Subescapular (Músculo Diana)", "minimo_esperado": "0-1/5 (Prohibido trabajo activo)" },
+        { "musculo": "Serrato Anterior y Trapecio Inferior (Músculo Diana)", "minimo_esperado": "3/5 (Estabilizadores de escápula)" },
+        { "musculo": "Romboides y Deltoides Anterior", "minimo_esperado": "2/5 (Activación submáxima isométrica si autoriza C.Q.)" }
       ],
       "items": [
         {
@@ -115,8 +157,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { "movimiento": "Pronosupinación", "fisiologico": "80° - 90°", "objetivo_fase": "50° / 50°" }
       ],
       "musculos_daniels": [
-        { "musculo": "Flexor/Extensor carpi radialis", "minimo_esperado": "3/5" },
-        { "musculo": "Flexor pollicis longus", "minimo_esperado": "3/5" }
+        { "musculo": "Flexor Carpi Radialis / Ulnaris (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Extensor Carpi Radialis Longus / Brevis (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Pronador Cuadrado y Pronador Redondo (Músculo Diana)", "minimo_esperado": "2-3/5" },
+        { "musculo": "Flexor Pollicis Longus - FPL (Músculo Diana)", "minimo_esperado": "3/5" }
       ],
       "items": [
         {
@@ -137,6 +181,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ]
     },
+    {
+      "id": "tunel_carpiano_abierto",
+      "region": "miembro_superior",
+      "nombre": "Liberación Abierta del Túnel Carpiano (Semanas 1 - 4)",
+      "rom": [
+        { "movimiento": "Flexoextensión de muñeca", "fisiologico": "0° - 80° / 70°", "objetivo_fase": "Completo sin dolor" },
+        { "movimiento": "Oposición del pulgar", "fisiologico": "Kapandji 10", "objetivo_fase": "Kapandji >= 8" }
+      ],
+      "musculos_daniels": [
+        { "musculo": "Abductor Brevis Pollicis (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Opponens Pollicis (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Flexor Brevis Pollicis - Cabeza superficial (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Lumbricales 1º y 2º (Músculo Diana)", "minimo_esperado": "4/5" }
+      ],
+      "items": [
+        {
+          "id": "oposicion_pulgar_completa",
+          "criterio": "Oposición completa del pulgar (Test de Kapandji >= 8)",
+          "causas_no_cumplimiento": [
+            "Atrofia o inhibición motora tenar por denervación previa prolongada.",
+            "Dolor de pilar ('Pillar Pain') sobre el retináculo flexor cortado.",
+            "Cicatriz hipertrófica sensible sobre la eminencia tenar."
+          ]
+        }
+      ],
+      "tests": [
+        {
+          "id": "test_phalen",
+          "nombre": "Test de Phalen",
+          "descripcion": "Flexión máxima de muñecas mantenida durante 60 segundos. Evalúa compresión del nervio mediano."
+        },
+        {
+          "id": "signo_tinel_mediano",
+          "nombre": "Signo de Tinel en Túnel Carpiano",
+          "descripcion": "Percusión suave sobre el retináculo flexor para reproducir parestesias en 1º-3er dedo."
+        }
+      ]
+    },
 
     // --- MIEMBRO INFERIOR ---
     {
@@ -148,8 +230,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { "movimiento": "Flexión de rodilla", "fisiologico": "0° - 135°", "objetivo_fase": "90° (Semana 2) -> 110° (Semana 4)" }
       ],
       "musculos_daniels": [
-        { "musculo": "Cuádriceps (Vasto Medial Interno - VMO)", "minimo_esperado": "3/5 (conseguir SLR sin rezago extensor)" },
-        { "musculo": "Isquiotibial / Glúteo medio", "minimo_esperado": "3/5" }
+        { "musculo": "Vasto Medial Interno - VMO (Músculo Diana)", "minimo_esperado": "3/5 (SLR sin rezago extensor)" },
+        { "musculo": "Recto Femoral / Cuádriceps Global (Músculo Diana)", "minimo_esperado": "3/5" },
+        { "musculo": "Isquiotibial Semitendinoso / Semimembranoso (Músculo Diana)", "minimo_esperado": "3/5 (Atención a la zona donante del injerto)" },
+        { "musculo": "Glúteo Medio (Músculo Diana)", "minimo_esperado": "3/5 (Estabilizador de cadera/valgo de rodilla)" }
       ],
       "items": [
         {
@@ -185,8 +269,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { "movimiento": "Flexión plantar", "fisiologico": "0° - 50°", "objetivo_fase": "20° - 30° (sin estiramiento activo)" }
       ],
       "musculos_daniels": [
-        { "musculo": "Tríceps sural (Gastrocnemios/Sóleo)", "minimo_esperado": "2/5 (Sin resistencia activa forzada)" },
-        { "musculo": "Tibial anterior y Peroneos", "minimo_esperado": "4/5" }
+        { "musculo": "Sóleo (Músculo Diana)", "minimo_esperado": "2/5 (Prohibida la flexión plantar contra resistencia pesada)" },
+        { "musculo": "Gastrocnemio Medial y Lateral (Músculo Diana)", "minimo_esperado": "2/5" },
+        { "musculo": "Tibial Anterior (Músculo Diana)", "minimo_esperado": "4/5" },
+        { "musculo": "Peroneo Largo y Corto (Músculo Diana)", "minimo_esperado": "3/5" }
       ],
       "items": [
         {
@@ -280,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    musculosData.forEach((m, idx) => {
+    musculosData.forEach((m) => {
       const div = document.createElement('div');
       div.className = 'bg-slate-900/60 p-2.5 rounded-lg border border-slate-700/50 space-y-2';
       div.innerHTML = `
